@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://de-pizzano-karachi.demo/sitemap.xml
+
