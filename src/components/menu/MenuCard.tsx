@@ -1,0 +1,130 @@
+'use client';
+
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { ExternalLink, Phone, Info } from 'lucide-react';
+import { MenuItem } from '@/types/menu';
+import { formatMenuItemPrice } from '@/lib/format-price';
+import { getFoodpandaUrl, getPhoneLink } from '@/lib/links';
+import { Button } from '@/components/ui/Button';
+
+interface MenuCardProps {
+  item: MenuItem;
+  onSelect?: (item: MenuItem) => void;
+}
+
+export function MenuCard({ item, onSelect }: MenuCardProps) {
+  const [imgError, setImgError] = useState(false);
+  const formattedPrice = formatMenuItemPrice(item);
+
+  return (
+    <div className="group relative bg-surface border border-surface-border hover:border-primary/50 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-card hover:-translate-y-1 flex flex-col h-full">
+      {/* Product Image Container */}
+      <div className="relative aspect-[4/3] w-full bg-surface-elevated overflow-hidden">
+        {item.image && !imgError ? (
+          <Image
+            src={item.image}
+            alt={item.name}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            onError={() => setImgError(true)}
+            priority={item.featured}
+          />
+        ) : (
+          <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-surface to-surface-elevated p-4 text-center">
+            <span className="text-3xl mb-1">🍕</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-muted">
+              {item.category.replace('-', ' ')}
+            </span>
+          </div>
+        )}
+
+        {/* Category Pill Tag */}
+        <div className="absolute top-3 left-3">
+          <span className="px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider bg-background/85 backdrop-blur-md text-secondary border border-secondary/30 rounded-full shadow-sm">
+            {item.category.replace('-', ' ')}
+          </span>
+        </div>
+
+        {/* Featured Tag if applicable */}
+        {item.featured && (
+          <div className="absolute top-3 right-3">
+            <span className="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-primary text-white rounded-md shadow-sm">
+              Popular
+            </span>
+          </div>
+        )}
+      </div>
+
+      {/* Product Details Content */}
+      <div className="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          {/* Product Name */}
+          <h3 className="text-lg font-bold text-white group-hover:text-secondary transition-colors font-display tracking-wide">
+            {item.name}
+          </h3>
+
+          {/* Indicative Price */}
+          <div className="mt-2 flex items-baseline gap-1.5">
+            <span className="text-xl font-extrabold text-white">
+              {formattedPrice}
+            </span>
+            <span className="text-[10px] text-muted-dark uppercase tracking-wider">
+              (Public listing rate)
+            </span>
+          </div>
+
+          {/* Product Description */}
+          {item.description ? (
+            <p className="mt-2.5 text-xs text-muted-light line-clamp-2 leading-relaxed">
+              {item.description}
+            </p>
+          ) : (
+            <p className="mt-2.5 text-xs text-muted-dark italic">
+              Freshly prepared to order. Standard recipe ingredients apply.
+            </p>
+          )}
+        </div>
+
+        {/* Card Actions */}
+        <div className="mt-5 pt-4 border-t border-surface-border/60 flex items-center justify-between gap-2">
+          {onSelect ? (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => onSelect(item)}
+              icon={<Info className="w-3.5 h-3.5 text-secondary" />}
+              className="text-xs flex-1 justify-center"
+            >
+              Details
+            </Button>
+          ) : (
+            <Button
+              variant="outline"
+              size="sm"
+              href={getPhoneLink()}
+              icon={<Phone className="w-3 h-3 text-secondary" />}
+              className="text-xs flex-1 justify-center"
+            >
+              Order Call
+            </Button>
+          )}
+
+          <Button
+            variant="foodpanda"
+            size="sm"
+            href={getFoodpandaUrl()}
+            external
+            icon={<ExternalLink className="w-3 h-3" />}
+            iconPosition="right"
+            className="text-xs flex-1 justify-center"
+          >
+            Foodpanda
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
+

@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #171311;
+  --foreground: #ffffff;
+  --surface: #211c19;
+  --primary: #d92d2d;
+  --secondary: #f3b544;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: #171311;
+  }
+
+  body {
+    background-color: #171311;
+    color: #ffffff;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #d92d2d;
+    color: #ffffff;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #171311;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #38302b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f3b544;
+}
+
+/* Subtle background glow effects */
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 20%, rgba(217, 45, 45, 0.12) 0%, rgba(23, 19, 17, 0) 70%);
+}
+
+.bg-hero-glow {
+  background: radial-gradient(circle at 60% 30%, rgba(243, 181, 68, 0.08) 0%, rgba(217, 45, 45, 0.06) 40%, rgba(23, 19, 17, 0) 75%);
+}
+
+/* Accessibility reduced-motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

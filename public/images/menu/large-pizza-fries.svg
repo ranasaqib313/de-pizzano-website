@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#231C16"/>
+      <stop offset="70%" stop-color="#171311"/>
+      <stop offset="100%" stop-color="#0F0C0A"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#F3B544" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#F3B544" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="crust" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97724"/>
+      <stop offset="50%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    <linearGradient id="cheese" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="60%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle circular grid texture -->
+  <circle cx="400" cy="270" r="220" fill="none" stroke="#38302A" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.4"/>
+  <circle cx="400" cy="270" r="170" fill="url(#glow)"/>
+
+  <!-- Main Food Plate / Pan Visual -->
+  <g transform="translate(400, 270)">
+    <!-- Base Plate -->
+    <ellipse cx="0" cy="15" rx="190" ry="140" fill="#1C1714" stroke="#3A3029" stroke-width="4"/>
+    <ellipse cx="0" cy="10" rx="180" ry="130" fill="#261E1A"/>
+
+    
+      <!-- Fries Container / Loaded -->
+      <ellipse cx="0" cy="20" rx="130" ry="80" fill="#B91C1C"/>
+      <g fill="#F59E0B" stroke="#D97706" stroke-width="2">
+        <rect x="-70" y="-60" width="16" height="90" rx="4" transform="rotate(-15 -70 -60)"/>
+        <rect x="-40" y="-70" width="16" height="100" rx="4" transform="rotate(-8 -40 -70)"/>
+        <rect x="-10" y="-75" width="16" height="105" rx="4" transform="rotate(2 -10 -75)"/>
+        <rect x="20" y="-70" width="16" height="100" rx="4" transform="rotate(10 20 -70)"/>
+        <rect x="50" y="-60" width="16" height="90" rx="4" transform="rotate(18 50 -60)"/>
+      </g>
+      <!-- Melted cheese topping -->
+      <path d="M-80,-10 Q0,-40 80,-10 Q50,40 0,30 Q-50,40 -80,-10 Z" fill="#FDE047" opacity="0.85"/>
+      <circle cx="-20" cy="0" r="7" fill="#DC2626"/>
+      <circle cx="25" cy="5" r="7" fill="#DC2626"/>
+    
+  </g>
+
+  <!-- Bottom Details Bar Overlay -->
+  <rect x="0" y="470" width="800" height="130" fill="#130F0D" fill-opacity="0.95"/>
+  <line x1="0" y1="470" x2="800" y2="470" stroke="#38302A" stroke-width="1.5"/>
+
+  <!-- Category Pill -->
+  <rect x="50" y="492" width="140" height="26" rx="13" fill="#211C19" stroke="#F3B544" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="120" y="509" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#F3B544" text-anchor="middle" letter-spacing="1">FRIED ITEMS</text>
+
+  <!-- Product Title -->
+  <text x="50" y="550" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">Large Pizza Fries</text>
+
+  <!-- Price Tag -->
+  <text x="750" y="546" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#F3B544" text-anchor="end">Rs. 750</text>
+  <text x="750" y="566" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#85786E" text-anchor="end">INDICATIVE PUBLIC RATE</text>
+</svg>
