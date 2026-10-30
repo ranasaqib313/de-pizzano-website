@@ -48,7 +48,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 200,
     isStartingPrice: true,
     currency: 'Rs.',
-    image: '/images/menu/garlic-bread.svg',
+    image: '/images/menu/garlic-bread.jpg',
   },
   {
     id: 'cheesy-stick',
@@ -57,7 +57,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 550,
     isStartingPrice: false,
     currency: 'Rs.',
-    image: '/images/menu/cheesy-stick.svg',
+    image: '/images/menu/cheesy-stick.jpg',
   },
   {
     id: 'chicken-nuggets',
@@ -66,7 +66,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 450,
     isStartingPrice: true,
     currency: 'Rs.',
-    image: '/images/menu/chicken-nuggets.svg',
+    image: '/images/menu/chicken-nuggets.jpg',
   },
   {
     id: 'chicken-wings',
@@ -75,7 +75,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 550,
     isStartingPrice: true,
     currency: 'Rs.',
-    image: '/images/menu/chicken-wings.svg',
+    image: '/images/menu/chicken-wings.jpg',
     featured: true,
   },
 
@@ -88,7 +88,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isStartingPrice: true,
     currency: 'Rs.',
     description: 'Pizza sauce, onion, chicken tikka, cheese.',
-    image: '/images/menu/chicken-tikka-pizza.svg',
+    image: '/images/menu/chicken-tikka-pizza.jpg',
     featured: true,
   },
   {
@@ -99,7 +99,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isStartingPrice: true,
     currency: 'Rs.',
     description: 'Pizza sauce, onion, green pepper, chicken fajita, cheese.',
-    image: '/images/menu/chicken-fajita-pizza.svg',
+    image: '/images/menu/chicken-fajita-pizza.jpg',
     featured: true,
   },
   {
@@ -110,7 +110,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isStartingPrice: true,
     currency: 'Rs.',
     description: 'Fajita, jalapeno, onion, green pepper, cheese.',
-    image: '/images/menu/fajita-sicillian-pizza.svg',
+    image: '/images/menu/fajita-sicillian-pizza.jpg',
   },
   {
     id: 'tandoori-hot-pizza',
@@ -120,7 +120,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isStartingPrice: true,
     currency: 'Rs.',
     description: 'Tandoori chicken, tomato, onion, cheese.',
-    image: '/images/menu/tandoori-hot-pizza.svg',
+    image: '/images/menu/tandoori-hot-pizza.jpg',
   },
   {
     id: 'cheesy-delight-pizza',
@@ -129,7 +129,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 750,
     isStartingPrice: true,
     currency: 'Rs.',
-    image: '/images/menu/cheesy-delight-pizza.svg',
+    image: '/images/menu/cheesy-delight-pizza.jpg',
   },
   {
     id: 'afghani-delux-pizza',
@@ -138,7 +138,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 750,
     isStartingPrice: true,
     currency: 'Rs.',
-    image: '/images/menu/afghani-delux-pizza.svg',
+    image: '/images/menu/afghani-delux-pizza.jpg',
   },
   {
     id: 'arabian-green-pizza',
@@ -148,7 +148,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isStartingPrice: true,
     currency: 'Rs.',
     description: 'Green sauce, onion, green pepper, jalapeno, fajita.',
-    image: '/images/menu/arabian-green-pizza.svg',
+    image: '/images/menu/arabian-green-pizza.jpg',
   },
   {
     id: 'veggie-lover-pizza',
@@ -158,7 +158,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isStartingPrice: true,
     currency: 'Rs.',
     description: 'Onion, green pepper, olives, mushroom, sweet corn.',
-    image: '/images/menu/veggie-lover-pizza.svg',
+    image: '/images/menu/veggie-lover-pizza.jpg',
   },
   {
     id: 'italian-delight-pizza',
@@ -168,7 +168,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isStartingPrice: true,
     currency: 'Rs.',
     description: 'Green pepper, black olive, sweet corn, smoked chicken.',
-    image: '/images/menu/italian-delight-pizza.svg',
+    image: '/images/menu/italian-delight-pizza.jpg',
   },
   {
     id: 'hot-pepperoni-pizza',
@@ -177,7 +177,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 800,
     isStartingPrice: true,
     currency: 'Rs.',
-    image: '/images/menu/hot-pepperoni-pizza.svg',
+    image: '/images/menu/hot-pepperoni-pizza.jpg',
     featured: true,
   },
   {
@@ -187,7 +187,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 1300,
     isStartingPrice: false,
     currency: 'Rs.',
-    image: '/images/menu/kababis-pizza.svg',
+    image: '/images/menu/kababis-pizza.jpg',
   },
 
   // CATEGORY C — SPECIAL PIZZA (5 items)
@@ -199,7 +199,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isStartingPrice: true,
     currency: 'Rs.',
     description: 'Tikka, fajita, onion, green pepper, mushroom, black olives.',
-    image: '/images/menu/pizzano-max-chicken-pizza.svg',
+    image: '/images/menu/pizzano-max-chicken-pizza.jpg',
     featured: true,
   },
   {
@@ -210,7 +210,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isStartingPrice: true,
     currency: 'Rs.',
     description: 'Green sauce, onion, chicken seekh kabab, cheese, mayonnaise.',
-    image: '/images/menu/pizzano-kabab-delight-pizza.svg',
+    image: '/images/menu/pizzano-kabab-delight-pizza.jpg',
     featured: true,
   },
   {
@@ -221,7 +221,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isStartingPrice: true,
     currency: 'Rs.',
     description: 'Creamy sauce, onion, jalapeno, mushroom, fajita, cheese, mayonnaise.',
-    image: '/images/menu/pizzano-creamy-shawarma-pizza.svg',
+    image: '/images/menu/pizzano-creamy-shawarma-pizza.jpg',
   },
   {
     id: 'pizzano-malai-classic-pizza',
@@ -231,7 +231,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isStartingPrice: true,
     currency: 'Rs.',
     description: 'Creamy sauce, onion, malai chicken, cheese, mayonnaise.',
-    image: '/images/menu/pizzano-malai-classic-pizza.svg',
+    image: '/images/menu/pizzano-malai-classic-pizza.jpg',
     featured: true,
   },
   {
@@ -241,7 +241,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 1000,
     isStartingPrice: false,
     currency: 'Rs.',
-    image: '/images/menu/stuffed-crust-cheese-pizza.svg',
+    image: '/images/menu/stuffed-crust-cheese-pizza.jpg',
   },
 
   // CATEGORY D — SANDWICHES (2 items)
@@ -252,7 +252,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 550,
     isStartingPrice: false,
     currency: 'Rs.',
-    image: '/images/menu/chicken-sandwich.svg',
+    image: '/images/menu/chicken-sandwich.jpg',
   },
   {
     id: 'mexican-sandwich',
@@ -261,7 +261,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 550,
     isStartingPrice: false,
     currency: 'Rs.',
-    image: '/images/menu/mexican-sandwich.svg',
+    image: '/images/menu/mexican-sandwich.jpg',
   },
 
   // CATEGORY E — PASTAS (2 items)
@@ -272,7 +272,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 700,
     isStartingPrice: false,
     currency: 'Rs.',
-    image: '/images/menu/creamy-pasta.svg',
+    image: '/images/menu/creamy-pasta.jpg',
     featured: true,
   },
   {
@@ -282,7 +282,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 850,
     isStartingPrice: false,
     currency: 'Rs.',
-    image: '/images/menu/chicken-lasagne.svg',
+    image: '/images/menu/chicken-lasagne.jpg',
   },
 
   // CATEGORY F — FRIED ITEMS (2 items)
@@ -293,7 +293,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 750,
     isStartingPrice: false,
     currency: 'Rs.',
-    image: '/images/menu/large-pizza-fries.svg',
+    image: '/images/menu/large-pizza-fries.jpg',
     featured: true,
   },
   {
@@ -303,6 +303,6 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 450,
     isStartingPrice: false,
     currency: 'Rs.',
-    image: '/images/menu/small-pizza-fries.svg',
+    image: '/images/menu/small-pizza-fries.jpg',
   },
 ];

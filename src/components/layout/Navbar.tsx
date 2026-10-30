@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, ExternalLink, Menu, X, Flame, MapPin } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
@@ -42,24 +43,31 @@ export function Navbar() {
       </div>
 
       {/* Main Navigation Bar */}
-      <header
+      <motion.header
+        initial={{ y: -10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         className={cn(
           'sticky top-0 z-40 w-full transition-all duration-300 backdrop-blur-md',
           isScrolled
-            ? 'bg-background/90 border-b border-surface-border shadow-lg py-3'
+            ? 'bg-background/95 border-b border-surface-border shadow-lg py-3'
             : 'bg-background/70 border-b border-surface-border/50 py-4'
         )}
       >
         <Container size="xl">
           <div className="flex items-center justify-between">
-            {/* Brand Logo / Wordmark */}
+            {/* Brand Logo */}
             <Link
               href="/"
               className="group flex items-center gap-2.5 focus:outline-none focus:ring-2 focus:ring-primary rounded-lg p-1"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-md group-hover:shadow-glow-red transition-all">
-                <Flame className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
-              </div>
+              <motion.div
+                whileHover={{ scale: 1.08, rotate: -5 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 15 }}
+                className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-md group-hover:shadow-glow-red transition-shadow"
+              >
+                <Flame className="w-6 h-6 text-white" />
+              </motion.div>
               <div className="flex flex-col">
                 <span className="text-xl sm:text-2xl font-black tracking-wider text-white font-display uppercase group-hover:text-secondary transition-colors">
                   DE PIZZANO
@@ -70,7 +78,7 @@ export function Navbar() {
               </div>
             </Link>
 
-            {/* Desktop Navigation Links */}
+            {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
               {MAIN_NAV_ITEMS.map((item) => {
                 const isActive = pathname === item.href;
@@ -87,7 +95,11 @@ export function Navbar() {
                   >
                     {item.label}
                     {isActive && (
-                      <span className="absolute bottom-0 left-2 right-2 h-0.5 bg-primary rounded-full" />
+                      <motion.span
+                        layoutId="nav-indicator"
+                        className="absolute bottom-0 left-2 right-2 h-0.5 bg-primary rounded-full"
+                        transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                      />
                     )}
                   </Link>
                 );
@@ -119,7 +131,7 @@ export function Navbar() {
               </Button>
             </div>
 
-            {/* Mobile Menu Toggle Button */}
+            {/* Mobile Menu Toggle */}
             <div className="flex items-center gap-2 lg:hidden">
               <Button
                 variant="foodpanda"
@@ -131,20 +143,21 @@ export function Navbar() {
                 Foodpanda
               </Button>
 
-              <button
+              <motion.button
                 type="button"
+                whileTap={{ scale: 0.92 }}
                 onClick={() => setMobileMenuOpen(true)}
-                className="p-2 text-muted-light hover:text-white bg-surface border border-surface-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                className="p-2 text-muted-light hover:text-white bg-surface border border-surface-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors"
                 aria-label="Open Navigation Menu"
               >
                 <Menu className="w-6 h-6" />
-              </button>
+              </motion.button>
             </div>
           </div>
         </Container>
-      </header>
+      </motion.header>
 
-      {/* Mobile Drawer Navigation */}
+      {/* Mobile Drawer */}
       <MobileMenu
         isOpen={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
@@ -153,4 +166,3 @@ export function Navbar() {
     </>
   );
 }
-
